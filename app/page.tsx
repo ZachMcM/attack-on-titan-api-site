@@ -4,7 +4,7 @@ import Link from "next/link"
 import { FaArrowRight } from "react-icons/fa"
 
 async function getTitans() {
-  const res = await fetch("https://attackontitanapi.com/api/titans")
+  const res = await fetch("https://api.attackontitanapi.com/titans", { cache: "no-store"})
   const data = await res.json()
   return data
 }
