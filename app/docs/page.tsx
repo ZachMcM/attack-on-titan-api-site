@@ -43,7 +43,7 @@ export default function Docs() {
                 </div>
             </div> 
             <CharactersDocs/>
-            <footer className="flex justify-between py-10">
+            <footer className="flex justify-between py-10 border-t border-neutral-700">
                 <p>Released under MIT License.</p>
                 <a  href="https://github.com/ZachMcM/attack-on-titan-api-site" className="hover:text-fuchsia-500 flex space-x-3 items-center">
                     <FaPencilAlt/>

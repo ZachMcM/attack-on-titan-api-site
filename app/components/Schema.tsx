@@ -15,7 +15,7 @@ export default function Schema(props: any) {
                         {
                             schema.map((schema: SchemaData) => {
                                 return (
-                                    <tr className="border-b border-neutral-700">
+                                    <tr className="border-b border-neutral-700" key={Math.floor(Math.random() * 1000)}>
                                         <td className="py-4">{schema.key}</td>
                                         <td className="py-4">{schema.type}</td>
                                         <td className="py-4">{schema.desc}</td>

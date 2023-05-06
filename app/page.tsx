@@ -1,4 +1,3 @@
-import Image from "next/image"
 import Titan from "./components/Titan"
 import Link from "next/link"
 import { FaArrowRight } from "react-icons/fa"

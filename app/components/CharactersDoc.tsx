@@ -47,7 +47,14 @@ export default function CharactersDocs() {
             <div className="flex flex-col space-y-3.5 py-10" id="characters-filter">
                 <h4 className="font-bold text-2xl" id="characters">Filter characters</h4> 
                 <p className="text-lg">To filter characters to include a query in the request. Add a <InlineCode>?</InlineCode> followed by the query <InlineCode>{"<query>=>value>"}</InlineCode>. To chain multiple queries seperate them by <InlineCode>&</InlineCode>.</p>
-                <p className="text-lg">As an example if you only wanted get a list of characters who are soldiers and are alive you would add <InlineCode>?status=alive&occupation=soldier</InlineCode></p>
+                <p className="text-lg">As an example if you only wanted get a list of characters who have an occupation of soldier and a status of alive you would add <InlineCode>?status=alive&occupation=soldier</InlineCode> to the url.</p>
+                <p className="text-lg">Available parameters:</p>
+                <ul className="text-lg list-disc list-inside ml-10 flex flex-col space-y-3">
+                    <li><InlineCode>name</InlineCode>: filter by name</li>
+                    <li><InlineCode>gender</InlineCode>: filter by gender (male, female or unknown)</li>
+                    <li><InlineCode>status</InlineCode>: filter by status (alive, deceased or unknown)</li>
+                    <li><InlineCode>occupation</InlineCode>: filter by occupation (soldier, thug, etc.)</li>
+                </ul>
                 <div className="py-6">
                     <CodeSnippet language="shell-session" code="GET https://api.attackontitanapi.com/characters?status=alive&occupation=soldier"/>
                     <CodeSnippet language="json" code={charactersFilter}/>
