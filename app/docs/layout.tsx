@@ -8,7 +8,7 @@ export default function RootLayout({
   return (
     <div className="flex flex-1 overflow-hidden">
       <Sidebar/>
-      <div className="flex-1 overflow-y-scroll">
+      <div className="flex-1 overflow-y-auto">
         {children}
       </div>
     </div>
