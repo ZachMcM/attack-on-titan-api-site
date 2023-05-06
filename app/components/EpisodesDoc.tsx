@@ -40,7 +40,7 @@ export default function EpisodesDoc() {
                 <h4 className="font-bold text-2xl">Get multiple episodes</h4>
                 <p className="text-lg">You can get multiple episodes by adding an list of ids as the request parameter <InlineCode>/episodes/88,87</InlineCode>.</p>
                 <div className="py-6">
-                    <CodeSnippet language="shell-session" code="GET https://api.attackontitanapi.com/episodes/88/87"/>
+                    <CodeSnippet language="shell-session" code="GET https://api.attackontitanapi.com/episodes/88,87"/>
                     <CodeSnippet language="json" code={episodesMultiple}/>
                 </div>
             </div>
