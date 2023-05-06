@@ -81,7 +81,7 @@ export default function ResourceDocs(props: any) {
                     {
                         resourceParams.map((param: Param) => {
                             return (
-                                <li><InlineCode>{param.name}</InlineCode>: {param.desc}</li>
+                                <li key={Math.floor(Math.random() * 10000)}><InlineCode>{param.name}</InlineCode>: {param.desc}</li>
                             )
                         })
                     }

@@ -6,7 +6,7 @@ export default async function Titan(characterInfo: any) {
 
     return (
         <div className="p-8 shadow-xl rounded-lg flex flex-col space-y-8 md:space-y-0 md:flex-row md:space-x-10">
-            <div>
+            <div className="w-full flex justify-center lg:w-auto lg:block">
                 <Image 
                     src={img}
                     width={150}
@@ -15,24 +15,21 @@ export default async function Titan(characterInfo: any) {
                     className="rounded-lg"
                 />
             </div>
-            <div className="flex flex-col space-y-1">
+            <div className="flex flex-col space-y-1 lg:w-3/5">
                 <h3 className="text-2xl font-semibold mb-2">{name}</h3>
-                <div className="flex space-x-1">
-                    <p className="font-semibold">Height:</p>
-                    <p>{height}</p>
-                </div>
-                <div className="flex space-x-1">
-                    <p className="font-semibold">Current Inheritor:</p>
-                    <p>{curr}</p>
-                </div>
-                <div className="flex space-x-1">
-                    <p className="font-semibold">Allegiance:</p>
-                    <p>{allegiance}</p>
-                </div>
-                <div className="flex space-x-1">
-                    <p className="font-semibold">Abilities:</p>
-                    <p>{abilities[0]}...</p>
-                </div>
+                <p><span className="font-semibold">Height:</span> {height}</p>
+                <p><span className="font-semibold">Current Inheritor:</span> {curr}</p>
+                <p><span className="font-semibold">Allegiance:</span> {allegiance}</p>
+                <p><span className="font-semibold">Abilities:</span> {
+                    abilities.map((ability: string, i: number) => {
+                        if (i == abilities.length - 1) {
+                            return `${ability}.`
+                        } else {
+                            return `${ability}, `
+                        } 
+                    })
+                }</p>
+
             </div>
         </div>
     )

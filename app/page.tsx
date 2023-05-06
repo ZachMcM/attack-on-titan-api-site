@@ -19,7 +19,7 @@ export default async function Home() {
         <p className="font-bold">Docs</p>
         <FaArrowRight className="text-xl"/>
       </Link>
-      <div className="flex flex-col space-y-5 md:space-y-0 md:grid md:grid-cols-2 2xl:grid-cols-3 gap-10 mt-10">
+      <div className="flex flex-col space-y-5 lg:space-y-0 lg:grid lg:grid-cols-2 2xl:grid-cols-3 gap-10 mt-10 text-center lg:text-left">
         {
           titanData.results.map((titan: any) => {
             return (
@@ -30,7 +30,7 @@ export default async function Home() {
                 height={titan.height}
                 abilities={titan.abilities}
                 currentInheritor={titan.current_inheritor}
-                allegiance={titan.allegiance[0]}
+                allegiance={titan.allegiance}
                 key={titan.id}
               />
             )

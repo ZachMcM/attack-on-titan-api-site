@@ -5,3 +5,7 @@
 pre {
     border-radius: 0.5rem;
 }
+
+html, body {
+    scroll-behavior: smooth;
+}
