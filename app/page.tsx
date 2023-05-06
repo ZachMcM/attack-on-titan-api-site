@@ -16,7 +16,7 @@ export default async function Home() {
     <main className="w-full p-10 flex flex-col items-center">
       <h1 className="text-4xl md:text-6xl p-5 font-bold text-center">The Attack on Titan API</h1>
       <p className="p-3 text-lg md:text-xl max-w-4xl text-center">Welcome to the Attack on Titan API. This is free API allows users to get up to date information on the popular manga/anime Attack on Titan.</p>
-      <Link href="/docs" className="flex space-x-2 items-center text-xl bg-black text-white py-3 px-4 rounded-lg m-3 hover:opacity-80">
+      <Link href="/docs" className="flex space-x-2 items-center text-xl p-3 rounded-lg m-3 hover:text-fuchsia-500">
         <p className="font-bold">Docs</p>
         <FaArrowRight className="text-xl"/>
       </Link>
