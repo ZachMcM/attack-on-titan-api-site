@@ -1,11 +1,48 @@
 import InlineCode from "../components/InlineCode"
 import CodeSnippet from "../components/CodeSnippet"
 
-import { baseRoute } from "@/data/snippets"
-import { infoObject } from "@/data/snippets"
+import {
+    charactersAll,
+    characterSingle,
+    charactersMultiple,
+    charactersFilter,
+    episodesAll,
+    episodesSingle,
+    episodesMultiple,
+    episodesFilter,
+    locationsAll,
+    locationsSingle,
+    locationsMultiple,
+    locationsFilter,
+    organizationsAll,
+    organizationsSingle,
+    organizationsMultiple,
+    organizationsFilter,
+    titansAll,
+    titansSingle,
+    titansMultiple,
+    titansFilter,
+    baseRoute,
+    infoObject
+} from '@/data/snippets'
 
-import CharactersDocs from "../components/CharactersDoc"
-import EpisodesDocs from "../components/EpisodesDoc"
+import { 
+    characterParams, 
+    episodeParams, 
+    locationParams,
+    organizationParams,
+    titanParams
+} from "@/data/availableParams";
+
+import { 
+    characterSchema, 
+    episodeSchema, 
+    locationSchema,
+    organizationSchema,
+    titanSchema
+} from "@/data/schemas"
+
+import ResourceDocs from "../components/ResourceDocs"
 
 import { FaPencilAlt } from "react-icons/fa"
 
@@ -43,8 +80,76 @@ export default function Docs() {
                     <CodeSnippet language="json" code={infoObject}/>
                 </div>
             </div> 
-            <CharactersDocs/>
-            <EpisodesDocs/>
+            <ResourceDocs
+                first={true}
+                resourceName={"Characters"}
+                resourceTotal={201}
+                resourcePageCount={11}
+                resourceSchema={characterSchema}
+                resourceAll={charactersAll}
+                resourceSingle={characterSingle}
+                resourceMultiple={charactersMultiple}
+                resourceFilter={charactersFilter}
+                resourceParams={characterParams}
+                sampleIds={[188, 1]}
+                sampleFilter={"/characters?status=alive&occupation=soldier"}
+            />
+            <ResourceDocs
+                first={false}
+                resourceName={"Episodes"}
+                resourceTotal={88}
+                resourcePageCount={5}
+                resourceSchema={episodeSchema}
+                resourceAll={episodesAll}
+                resourceSingle={episodesSingle}
+                resourceMultiple={episodesMultiple}
+                resourceFilter={episodesFilter}
+                resourceParams={episodeParams}
+                sampleIds={[88, 87]}
+                sampleFilter={"/episodes?episode=S1"}
+            />
+            <ResourceDocs
+                first={false}
+                resourceName={"Locations"}
+                resourceTotal={36}
+                resourcePageCount={2}
+                resourceSchema={locationSchema}
+                resourceAll={locationsAll}
+                resourceSingle={locationsSingle}
+                resourceMultiple={locationsMultiple}
+                resourceFilter={locationsFilter}
+                resourceParams={locationParams}
+                sampleIds={[7, 9]}
+                sampleFilter={"/locations?territory=shiganshina"}
+            />
+            <ResourceDocs
+                first={false}
+                resourceName={"Organizations"}
+                resourceTotal={17}
+                resourcePageCount={1}
+                resourceSchema={organizationSchema}
+                resourceAll={organizationsAll}
+                resourceSingle={organizationsSingle}
+                resourceMultiple={organizationsMultiple}
+                resourceFilter={organizationsFilter}
+                resourceParams={organizationParams}
+                sampleIds={[5, 17]}
+                sampleFilter={"/organizations?affiliation=marley"}
+            />
+            <ResourceDocs
+                first={false}
+                resourceName={"Titans"}
+                resourceTotal={9}
+                resourcePageCount={1}
+                resourceSchema={titanSchema}
+                resourceAll={titansAll}
+                resourceSingle={titansSingle}
+                resourceMultiple={titansMultiple}
+                resourceFilter={titansFilter}
+                resourceParams={titanParams}
+                sampleIds={[1, 3]}
+                sampleFilter={"/titans?allegiance=marley"}
+            />
             <footer className="flex justify-between pt-10 mt-20 border-t border-neutral-700">
                 <p>Released under MIT License.</p>
                 <a  href="https://github.com/ZachMcM/attack-on-titan-api-site" className="hover:text-fuchsia-500 flex space-x-3 items-center">
