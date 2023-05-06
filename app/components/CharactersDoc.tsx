@@ -12,9 +12,9 @@ import { characterSchema } from "@/data/schemas"
 export default function CharactersDocs() {
     return (
         <>
-            <div className="flex flex-col space-y-3.5 py-10" id="character-schema">
-                <h3 className="font-bold text-3xl" id="characters">Characters</h3> 
-                <p>There are <InlineCode>201</InlineCode> characters with <InlineCode>11</InlineCode> pages.</p>
+            <div className="flex flex-col space-y-3.5 py-10" id="characters">
+                <h3 className="font-bold text-3xl">Characters</h3> 
+                <p className="text-lg">There are <InlineCode>201</InlineCode> characters with <InlineCode>11</InlineCode> pages.</p>
             </div>
             <div className="flex flex-col space-y-3.5 py-10" id="character-schema">
                 <h4 className="font-bold text-2xl">Character Schema</h4>
@@ -46,7 +46,7 @@ export default function CharactersDocs() {
             </div>
             <div className="flex flex-col space-y-3.5 py-10" id="characters-filter">
                 <h4 className="font-bold text-2xl" id="characters">Filter characters</h4> 
-                <p className="text-lg">To filter characters to include a query in the request. Add a <InlineCode>?</InlineCode> followed by the query <InlineCode>{"<query>=>value>"}</InlineCode>. To chain multiple queries seperate them by <InlineCode>&</InlineCode>.</p>
+                <p className="text-lg">To filter characters to include a query in the request. Add a <InlineCode>?</InlineCode> followed by the query <InlineCode>{"<query>=value>"}</InlineCode>. To chain multiple queries seperate them by <InlineCode>&</InlineCode>.</p>
                 <p className="text-lg">As an example if you only wanted get a list of characters who have an occupation of soldier and a status of alive you would add <InlineCode>?status=alive&occupation=soldier</InlineCode> to the url.</p>
                 <p className="text-lg">Available parameters:</p>
                 <ul className="text-lg list-disc list-inside ml-10 flex flex-col space-y-3">

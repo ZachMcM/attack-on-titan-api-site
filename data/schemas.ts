@@ -86,3 +86,31 @@ export const characterSchema: SchemaData[] = [
         desc: "The episodes the character appears in."
     }
 ]
+
+export const episodeSchema: SchemaData[] = [
+    {
+        key: "id",
+        type: "int",
+        desc: "The episode's id."
+    },
+    {
+        key: "name",
+        type: "string",
+        desc: "The episode's name."
+    },
+    {
+        key: "img",
+        type: "string",
+        desc: "The url to the episode's image."
+    },
+    {
+        key: "episode",
+        type: "string",
+        desc: "The code of the episode."
+    },
+    {
+        key: "characters",
+        type: "string[]",
+        desc: "A list of characters that appear in the episode."
+    }
+]

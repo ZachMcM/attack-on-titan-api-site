@@ -5,6 +5,7 @@ import { baseRoute } from "@/data/snippets"
 import { infoObject } from "@/data/snippets"
 
 import CharactersDocs from "../components/CharactersDoc"
+import EpisodesDocs from "../components/EpisodesDoc"
 
 import { FaPencilAlt } from "react-icons/fa"
 
@@ -43,7 +44,8 @@ export default function Docs() {
                 </div>
             </div> 
             <CharactersDocs/>
-            <footer className="flex justify-between py-10 border-t border-neutral-700">
+            <EpisodesDocs/>
+            <footer className="flex justify-between pt-10 mt-20 border-t border-neutral-700">
                 <p>Released under MIT License.</p>
                 <a  href="https://github.com/ZachMcM/attack-on-titan-api-site" className="hover:text-fuchsia-500 flex space-x-3 items-center">
                     <FaPencilAlt/>

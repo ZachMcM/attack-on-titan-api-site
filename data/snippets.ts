@@ -364,3 +364,103 @@ export const charactersFilter = `{
     },
     // ...
 ]`
+
+export const episodesAll = `{
+  "info": {
+    "count": 88,
+    "pages": 5,
+    "next_page": "https://api.attackontitanapi.com/episodes?page=2",
+    "prev_page": null
+  },
+  "results": [
+    {
+      "id": 1,
+      "name": "To You, in 2000 Years: The Fall of Shiganshina, Part 1",
+      "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/b/b4/The_Colossal_Titan_outside_Shiganshina.png/revision/latest/scale-to-width-down/350?cb=20180721185812",
+      "episode": "S01E01",
+      "characters": [
+        "https://api.attackontitanapi.com/characters/188",
+        "https://api.attackontitanapi.com/titans/4",
+        "https://api.attackontitanapi.com/characters/1",
+        // ...
+      ]
+    },
+    // ...
+  ]
+}`
+
+export const episodesSingle = `{
+  "id": 88,
+  "name": "THE FINAL CHAPTERS Special 1",
+  "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/1/18/Levi_bids_Hange_farewell.png/revision/latest/scale-to-width-down/350?cb=20230304060942",
+  "episode": "S04E29",
+  "characters": [
+    "https://api.attackontitanapi.com/characters/2",
+    "https://api.attackontitanapi.com/characters/188",
+    "https://api.attackontitanapi.com/characters/174",
+    // ...
+  ]
+}`
+
+export const episodesMultiple = `[
+  {
+    "id": 87,
+    "name": "The Dawn of Humanity",
+    "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/0/0b/Eren_talks_to_Zeke.png/revision/latest/scale-to-width-down/350?cb=20220323100254",
+    "episode": "S04E28",
+    "characters": [
+      "https://api.attackontitanapi.com/characters/2",
+      "https://api.attackontitanapi.com/characters/188",
+      "https://api.attackontitanapi.com/characters/10",
+      // ...
+    ]
+  },
+  {
+    "id": 88,
+    "name": "THE FINAL CHAPTERS Special 1",
+    "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/1/18/Levi_bids_Hange_farewell.png/revision/latest/scale-to-width-down/350?cb=20230304060942",
+    "episode": "S04E29",
+    "characters": [
+      "https://api.attackontitanapi.com/characters/2",
+      "https://api.attackontitanapi.com/characters/188",
+      "https://api.attackontitanapi.com/characters/174",
+      // ...
+    ]
+  }
+]`
+
+export const episodesFilter = `{
+  "info": {
+    "count": 25,
+    "pages": 2,
+    "next_page": "https://api.attackontitanapi.com/episodes?page=2?episode=S1",
+    "prev_page": null
+  },
+  "results": [
+    {
+      "id": 1,
+      "name": "To You, in 2000 Years: The Fall of Shiganshina, Part 1",
+      "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/b/b4/The_Colossal_Titan_outside_Shiganshina.png/revision/latest/scale-to-width-down/350?cb=20180721185812",
+      "episode": "S1E01",
+      "characters": [
+        "https://api.attackontitanapi.com/characters/188",
+        "https://api.attackontitanapi.com/titans/4",
+        "https://api.attackontitanapi.com/characters/1",
+        // ...
+      ]
+    },
+    {
+      "id": 2,
+      "name": "That Day: The Fall of Shiganshina, Part 2",
+      "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/1/13/A_Titan_grabs_a_citizen.png/revision/latest/scale-to-width-down/350?cb=20180721191547",
+      "episode": "S1E02",
+      "characters": [
+        "https://api.attackontitanapi.com/characters/67",
+        "https://api.attackontitanapi.com/characters/188",
+        "https://api.attackontitanapi.com/characters/2",
+        // ...
+      ]
+    },
+    // ...
+  ]
+}`
