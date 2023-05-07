@@ -5,7 +5,7 @@ export default async function Titan(characterInfo: any) {
     const curr = await getCurrentInheritor(currentInheritor)
 
     return (
-        <div className="p-8 shadow-xl rounded-lg flex flex-col space-y-8 md:space-y-0 md:flex-row md:space-x-10">
+        <div className="p-8 shadow-xl rounded-lg flex flex-col space-y-8 md:space-y-0 md:flex-row md:space-x-10 items-center">
             <div className="w-full flex justify-center lg:w-auto lg:block">
                 <Image 
                     src={img}
