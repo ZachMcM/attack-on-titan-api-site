@@ -8,7 +8,7 @@ const resourceList = [
 
 export default function Sidebar() {
     return (
-        <div className="hidden border-r border-neutral-700 md:w-1/4 lg:w-1/5 p-10 md:flex flex-col space-y-10 overflow-y-auto">
+        <div className="hidden border-r md:w-1/4 lg:w-1/5 p-10 md:flex flex-col space-y-10 overflow-y-auto">
             <div className="flex flex-col space-y-2.5">
                 <a href="#intro" className="text-2xl font-semibold hover:text-fuchsia-500">Introduction</a>
                 <a href="#rest" className="text-lg hover:text-fuchsia-500">REST</a>

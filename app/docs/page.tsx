@@ -44,7 +44,7 @@ import {
 
 import ResourceDocs from "../components/ResourceDocs"
 
-import { FaPencilAlt } from "react-icons/fa"
+import Footer from "../components/Footer";
 
 export default function Docs() {
     return (
@@ -150,13 +150,7 @@ export default function Docs() {
                 sampleIds={[1, 3]}
                 sampleFilter={"/titans?allegiance=marley"}
             />
-            <footer className="flex justify-between pt-10 mt-20 border-t border-neutral-700">
-                <p>Released under MIT License.</p>
-                <a  href="https://github.com/ZachMcM/attack-on-titan-api-site" className="hover:text-fuchsia-500 flex space-x-3 items-center">
-                    <FaPencilAlt/>
-                    <p>Edit this page</p>
-                </a>
-            </footer>
+            <Footer/>
         </div>
     )
 }
