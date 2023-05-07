@@ -23,9 +23,9 @@ export default async function Titan(characterInfo: any) {
                 <p><span className="font-semibold">Abilities:</span> {
                     abilities.map((ability: string, i: number) => {
                         if (i == abilities.length - 1) {
-                            return `${ability}.`
+                            return <span key={Math.floor(Math.random() * 10000)}>and {ability}.</span> 
                         } else {
-                            return `${ability}, `
+                            return <span key={Math.floor(Math.random() * 10000)}>{ability}, </span>
                         } 
                     })
                 }</p>
