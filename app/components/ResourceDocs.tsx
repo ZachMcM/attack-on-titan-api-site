@@ -2,9 +2,9 @@ import InlineCode from "./InlineCode";
 import CodeSnippet from "./CodeSnippet";
 
 import Schema from "./Schema";
-import { SchemaData } from "@/data/schemas";
+import { SchemaData } from "@/docs-data/schemas";
 
-import { Param } from "@/data/availableParams";
+import { Param } from "@/docs-data/availableParams";
 
 type DocProps = {
     first: boolean

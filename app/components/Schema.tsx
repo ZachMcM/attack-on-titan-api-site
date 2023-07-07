@@ -1,11 +1,11 @@
-import { SchemaData } from "@/data/schemas"
+import { SchemaData } from "@/docs-data/schemas"
 
 export default function Schema(props: any) {
     const { schema } = props
     return (
         <table className="text-lg max-w-prose">
                     <thead>
-                        <tr className="text-left border-b">
+                        <tr className="text-left border-b border-zinc-800">
                             <th className="font-semibold py-4">Key</th>
                             <th className="font-semibold">Type</th>
                             <th className="font-semibold">Description</th>
@@ -15,7 +15,7 @@ export default function Schema(props: any) {
                         {
                             schema.map((schema: SchemaData) => {
                                 return (
-                                    <tr className="border-b" key={Math.floor(Math.random() * 1000)}>
+                                    <tr className="border-b border-zinc-800" key={Math.floor(Math.random() * 1000)}>
                                         <td className="py-4">{schema.key}</td>
                                         <td className="py-4">{schema.type}</td>
                                         <td className="py-4">{schema.desc}</td>

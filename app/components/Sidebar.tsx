@@ -1,3 +1,8 @@
+'use client'
+
+import Link from "next/link"
+import { usePathname } from "next/navigation"
+
 const resourceList = [
     "Characters",
     "Episodes",
@@ -7,29 +12,16 @@ const resourceList = [
 ]
 
 export default function Sidebar() {
+    const pathname = usePathname()
+
     return (
-        <div className="hidden border-r md:w-1/4 lg:w-1/5 p-10 md:flex flex-col space-y-10 overflow-y-auto">
-            <div className="flex flex-col space-y-2.5">
-                <a href="#intro" className="text-2xl font-semibold hover:text-fuchsia-500">Introduction</a>
-                <a href="#rest" className="text-lg hover:text-fuchsia-500">REST</a>
-                <a href="#info" className="text-lg hover:text-fuchsia-500">Info and Pagination</a>
-            </div>
-            <>
-                {
-                    resourceList.map((resource: string) => {
-                        return (
-                            <div className="flex flex-col space-y-2.5">
-                                <a href={`#${resource.toLowerCase()}`} className="text-2xl font-semibold hover:text-fuchsia-500">{resource}</a>
-                                <a href={`#${resource.toLowerCase()}-schema`} className="text-lg hover:text-fuchsia-500">{resource.substring(0, resource.lastIndexOf("s"))} schema</a>
-                                <a href={`#${resource.toLowerCase()}-all`} className="text-lg hover:text-fuchsia-500">Get all {resource.toLowerCase()}</a>
-                                <a href={`#${resource.toLowerCase()}-single`} className="text-lg hover:text-fuchsia-500">Get a single {resource.toLowerCase().substring(0, resource.lastIndexOf("s"))}</a>
-                                <a href={`#${resource.toLowerCase()}-multiple`} className="text-lg hover:text-fuchsia-500">Get multiple {resource.toLowerCase()}</a>
-                                <a href={`#${resource.toLowerCase()}-filter`} className="text-lg hover:text-fuchsia-500">Filter {resource.toLowerCase()}</a>
-                            </div>
-                        )
-                    })
-                }
-            </>
+        <div className="hidden border-r md:w-1/4 border-zinc-800 lg:w-1/5 p-10 md:flex flex-col space-y-1 overflow-y-auto">
+            <Link href={`/docs`} className={`${pathname == "/docs" ? "text-sky-400 bg-sky-900/40" : "text-zinc-400" } py-1.5 px-4 rounded-md`}>Intro</Link>
+            <Link href={`/docs/characters`} className={`${pathname == "/docs/characters" ? "text-sky-400 bg-sky-900/40" : "hover:bg-zinc-800 text-zinc-400" } duration-300  py-1.5 px-4 rounded-md`}>Characters</Link>
+            <Link href={`/docs/episodes`} className={`${pathname == "/docs/episodes" ? "text-sky-400 bg-sky-900/40" : "hover:bg-zinc-800 text-zinc-400" } duration-300 py-1.5 px-4 rounded-md`}>Episodes</Link>
+            <Link href={`/docs/locations`} className={`${pathname == "/docs/locations" ? "text-sky-400 bg-sky-900/40" : "hover:bg-zinc-800 text-zinc-400" } duration-300  py-1.5 px-4 rounded-md`}>Locations</Link>
+            <Link href={`/docs/organizations`} className={`${pathname == "/docs/organizations" ? "text-sky-400 bg-sky-900/40" : "hover:bg-zinc-800 text-zinc-400" } duration-300  py-1.5 px-4 rounded-md`}>Organizations</Link>
+            <Link href={`/docs/titans`} className={`${pathname == "/docs/titans" ? "text-sky-400 bg-sky-900/40" : "hover:bg-zinc-800 text-zinc-400" } duration-300  py-1.5 px-4 rounded-md`}>Titans</Link>
         </div>
     )
 }
