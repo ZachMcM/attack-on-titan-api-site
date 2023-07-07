@@ -23,7 +23,7 @@ export default function Navbar() {
                 </a>
             </div>
             <div className="md:hidden">{ !mobileSidebar && <MobileButton setMobileSidebar={setMobileSidebar}/> }</div>
-            <MobileSidebar mobileSidebar={mobileSidebar} setMobileSidebar={setMobileSidebar}/>
+            <MobileMenu mobileSidebar={mobileSidebar} setMobileSidebar={setMobileSidebar}/>
         </nav>
     )
 }
@@ -38,19 +38,19 @@ function MobileButton({ setMobileSidebar }: { setMobileSidebar: Dispatch<SetStat
     )
 }
 
-function MobileSidebar({ setMobileSidebar, mobileSidebar }: { setMobileSidebar: Dispatch<SetStateAction<boolean>>, mobileSidebar: boolean }) {
+function MobileMenu({ setMobileSidebar, mobileSidebar }: { setMobileSidebar: Dispatch<SetStateAction<boolean>>, mobileSidebar: boolean }) {
     const pathname = usePathname()
 
     return (
-        <div className={`bg-zinc-950 flex flex-col space-y-3 inset-0 w-full left-0 fixed h-fit border-b border-zinc-800 top-0 p-10 ${mobileSidebar ? "translate-y-0" : "-translate-y-full"} duration-300`}>
+        <div className={`bg-zinc-950 flex flex-col space-y-3 inset-0 w-full left-0 fixed h-fit border-b border-zinc-800 top-0 p-3 ${mobileSidebar ? "translate-y-0" : "-translate-y-full"} duration-300`}>
             <button
                 className="absolute top-0 right-0 text-zinc-400 hover:text-white duration-300 m-5"
                 onClick={() => setMobileSidebar(false)}
             >
                 <TbX className="text-lg"/>
             </button>
-            <h3 className="text-lg font-medium">Attack on Titan API</h3>
-            <div className="flex items-center space-x-1">
+            <h3 className="text-lg font-medium py-1.5 px-4">Attack on Titan API</h3>
+            <div className="flex flex-col space-y-1">
                 <Link href={`/docs`} className={`${pathname == "/docs" ? "text-sky-400 bg-sky-900/40" : "text-zinc-400" } py-1.5 px-4 rounded-md`}>Intro</Link>
                 <Link href={`/docs/characters`} className={`${pathname == "/docs/characters" ? "text-sky-400 bg-sky-900/40" : "hover:bg-zinc-800 text-zinc-400" } duration-300  py-1.5 px-4 rounded-md`}>Characters</Link>
                 <Link href={`/docs/episodes`} className={`${pathname == "/docs/episodes" ? "text-sky-400 bg-sky-900/40" : "hover:bg-zinc-800 text-zinc-400" } duration-300 py-1.5 px-4 rounded-md`}>Episodes</Link>
