@@ -13,8 +13,8 @@ export default async function Home() {
   const titanData = await getTitans()
 
   return (
-    <>
-      <main className="p-10 mt-20 space-y-10 flex flex-col md:mx-16 lg:mx-48 2xl:mx-96 items-center">
+    <main>
+      <div className="min-h-screen p-10 mt-20 space-y-10 flex flex-col md:mx-16 lg:mx-48 2xl:mx-96 items-center">
         <div className="flex flex-col space-y-3 items-center">
           <h1 className="text-4xl md:text-6xl font-bold text-center">The Attack on Titan API</h1>
           <p className="text-lg md:text-xl max-w-4xl text-center text-zinc-400">Welcome to the Attack on Titan API. This is free API allows users to get up to date information on the popular manga/anime Attack on Titan.</p>
@@ -41,8 +41,8 @@ export default async function Home() {
             })
           }
         </div>
-      </main>    
+      </div>    
       <div className="mx-5 md:mx-10 lg:mx-20 2xl:mx-96"><Footer/></div>
-    </>
+    </main>
   )
 }
