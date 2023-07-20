@@ -12,8 +12,8 @@ export default function About() {
                     <p>Check out the <Link href="/docs" className="text-sky-400 hover:opacity-80 duration-300">documentation</Link> to use it in your next project!</p>
                 </div>
                 <div className="space-y-3.5 flex flex-col py-10">
-                    <h4 className="font-bold text-2xl">Who am you?</h4>
-                    <p className="text-lg">I am <Link href="/docs" className="text-sky-400 hover:opacity-80 duration-300">Zach McMullen</Link> a developer and computer science student at Purdue University.</p>
+                    <h4 className="font-bold text-2xl">Who am I?</h4>
+                    <p className="text-lg">I am <Link href="/docs" className="text-sky-400 hover:opacity-80 duration-300">Zach McMullen</Link> a developer, entrepreneur, and computer science student at Purdue University.</p>
                 </div>
                 <div className="flex flex-col space-y-3.5 py-10">
                     <h4 className="font-bold text-2xl">Why did you build this?</h4>
