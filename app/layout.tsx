@@ -1,6 +1,7 @@
 import './globals.css'
 
 import Navbar from './components/Navbar'
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata = {
   title: 'Attack on Titan API',
@@ -17,6 +18,7 @@ export default function RootLayout({
       <body className='flex flex-col h-screen bg-zinc-950 text-white '>
         <Navbar/>
         {children}
+        <Analytics/>
       </body>
     </html>
   )
